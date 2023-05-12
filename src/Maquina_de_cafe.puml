@@ -1,0 +1,18 @@
+@startuml
+
+left to right direction
+Actor Cliente as C
+
+usecase "Meter dinero" as MT
+usecase "Pedir azucar" as PA
+usecase "Pedir producto" as PP
+usecase "Cancelar" as Ca
+usecase "Devolver dinero" as DD
+
+C -- MT
+C -- PA
+C -- PP
+C -- Ca
+Ca .. DD : <<include>>
+PP .. DD : <<include>>
+@enduml
