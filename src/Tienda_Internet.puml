@@ -1,11 +1,23 @@
 @startuml
-'https://plantuml.com/sequence-diagram
 
-autonumber
+left to right direction
+Actor Cliente as C
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+usecase "Identificarse" as I
+usecase "Pagar" as P
+usecase "Elegir mensajero" as EM
+usecase "Confirmar" as Co
+usecase "Registrarse" as R
+usecase "Pagar con tarjeta" as Ptra
+usecase "Pagar con transferencia" as Ptar
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+C -- I
+C -- P
+C -- EM
+C -- Co
+
+R ..> I : <<extend>>
+Ptra --> P
+Ptar --> P
+
 @enduml
