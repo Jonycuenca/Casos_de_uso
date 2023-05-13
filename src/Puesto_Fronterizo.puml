@@ -6,9 +6,11 @@ Actor "Ciudadano extranjero" as CE
 usecase "Registrar Entrada" as RE
 usecase "Tomar huellas" as TH
 
-C -- RE
-CE -- TH
-CE --> C
-TH --> RE : <<extends>>
+
+C <|-- CE
+C - RE
+CE - TH
+
+RE <.. TH : <<extends>>
 
 @enduml

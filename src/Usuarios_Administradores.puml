@@ -13,7 +13,7 @@ usecase "Cerrar Sesion" as CS
 usecase "Registrar Usuario" as RU
 usecase "Instalar programa" as IP
 
-A --> U
+U <|- A
 U -- IS
 U -- RC
 U -- MC

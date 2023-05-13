@@ -16,8 +16,8 @@ C -- P
 C -- EM
 C -- Co
 
-R ..> I : <<extend>>
-Ptra --> P
-Ptar --> P
+I <.. R : <<extend>>
+P <|-- Ptra
+P <|-- Ptar
 
 @enduml
