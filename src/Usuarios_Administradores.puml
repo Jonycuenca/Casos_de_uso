@@ -1,11 +1,26 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-autonumber
+left to right direction
+Actor Usuario as U
+Actor Administrador as A
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+usecase "Iniciar Sesion" as IS
+usecase "Recuperar contraseña" as RC
+usecase "Modificar contraseña" as MC
+usecase "Cerrar Sesion" as CS
+usecase "Registrar Usuario" as RU
+usecase "Instalar programa" as IP
+
+A --> U
+U -- IS
+U -- RC
+U -- MC
+U -- CS
+A -- RU
+A -- IP
+
+
+
 @enduml
