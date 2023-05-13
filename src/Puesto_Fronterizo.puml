@@ -1,6 +1,14 @@
 @startuml
 
+Actor Ciudadano as C
+Actor "Ciudadano extranjero" as CE
 
+usecase "Registrar Entrada" as RE
+usecase "Tomar huellas" as TH
 
+C -- RE
+CE -- TH
+CE --> C
+TH --> RE : <<extends>>
 
 @enduml
